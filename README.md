@@ -41,6 +41,7 @@ people.last(); // After
     - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
     - [mapBy(key, value)](#mapbykey-value)
+    - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
 
 ## Object
@@ -170,6 +171,20 @@ const people = [
 
 people.mapBy('name');
 // ['Chris', 'Giuliano', 'Vu']
+```
+
+### order(direction?)
+
+Use `order()` on flat arrays.
+
+```js
+const people = ['Chris', 'Vu', 'Giuliano'];
+
+people.order();
+// ['Chris', 'Giuliano', 'Vu']
+
+people.order('desc');
+// ['Vu', 'Chris', 'Giuliano']
 ```
 
 ### orderBy(key, direction?)
