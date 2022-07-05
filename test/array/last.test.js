@@ -3,17 +3,15 @@ require('../../prototypes/array/last');
 const { expect } = require('chai');
 
 const people = [
-    { id: 1, name: 'Chris', isAdmin: true },
-    { id: 2, name: 'Giuliano', isAdmin: false },
-    { id: 3, name: 'Vu', isAdmin: undefined },
+    { name: 'Chris' },
+    { name: 'Giuliano' },
+    { name: 'Vu' }
 ];
 
-describe('lastItem', () => {
+describe('last', () => {
     describe('success', () => {
         it('returns last item', () => {
-            expect(people.last()).to.deep.equal({
-                id: 3, name: 'Vu', isAdmin: undefined
-            });
+            expect(people.last()).to.deep.equal({ name: 'Vu' });
         });
         
         it('returns no item if array is empty', () => {
