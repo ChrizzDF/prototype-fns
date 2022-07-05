@@ -1,14 +1,17 @@
 {
-  "name": "proto-fns",
+  "name": "prototype-fns",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom prototype functions to perform common operations with more ease and readability.",
   "main": "index.js",
   "scripts": {
     "test": "mocha './test/**/*.js'",
     "test:watch": "mocha './test/**/*.js' --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["helpers", "prototype functions", "utilities"],
+  "author": {
+    "name" : "ChrizzDF",
+    "email" : "chrizzdf@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.6",
