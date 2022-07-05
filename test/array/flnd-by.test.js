@@ -3,9 +3,9 @@ require('../../prototypes/array/find-by');
 const { expect } = require('chai');
 
 const people = [
-    { id: 1, name: 'Chris', isAdmin: true },
-    { id: 2, name: 'Giuliano', isAdmin: false },
-    { id: 3, name: 'Vu', isAdmin: undefined },
+    { name: 'Chris', isAdmin: true },
+    { name: 'Giuliano', isAdmin: false },
+    { name: 'Vu', isAdmin: undefined },
 ];
 
 describe('filterBy', () => {
@@ -16,10 +16,14 @@ describe('filterBy', () => {
     });
 
     describe('success', () => {
-        it('returns the correct result', () => {
+        it('returns correct item', () => {
             expect(people.findBy('name', 'Vu')).to.deep.equal({
-                id: 3, name: 'Vu', isAdmin: undefined
+                name: 'Vu', isAdmin: undefined
             });
+        });
+        
+        it('returns undefined if no match', () => {
+            expect(people.findBy('name', 'Tom')).to.be.undefined;
         });
     });
 });

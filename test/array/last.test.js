@@ -1,4 +1,4 @@
-require('../../prototypes/array/last-item');
+require('../../prototypes/array/last');
 
 const { expect } = require('chai');
 
@@ -11,13 +11,13 @@ const people = [
 describe('lastItem', () => {
     describe('success', () => {
         it('returns last item', () => {
-            expect(people.lastItem()).to.deep.equal({
+            expect(people.last()).to.deep.equal({
                 id: 3, name: 'Vu', isAdmin: undefined
             });
         });
         
         it('returns no item if array is empty', () => {
-            expect([].lastItem()).to.be.undefined;
+            expect([].last()).to.be.undefined;
         });
     });
 });
