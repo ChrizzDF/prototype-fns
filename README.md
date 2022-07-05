@@ -10,16 +10,22 @@
 
 ```js
 const people = [
-    { name: 'Chris' },
-    { name: 'Giuliano' },
-    { name: 'Vu' }
+    { name: 'Chris', isAdmin: true },
+    { name: 'Giuliano', isAdmin: false },
+    { name: 'Vu', isAdmin: false }
 ];
 
 people.filterBy('name', 'Chris');
-// => ['Chris']
+// ['Chris']
+
+people.filterBy('isAdmin', false);
+// [
+//   { name: 'Giuliano', isAdmin: false },
+//   { name: 'Vu', isAdmin: false },
+// ]
 
 people.filterBy('name', 'Tom');
-// => undefined
+// undefined
 ```
 
 ## findBy
@@ -32,10 +38,10 @@ const people = [
 ];
 
 people.findBy('name', 'Giuliano');
-// => { name: 'Giuliano' }
+// { name: 'Giuliano' }
 
 people.findBy('name', 'Tom');
-// => undefined
+// undefined
 ```
 
 ## first
@@ -48,10 +54,10 @@ const people = [
 ];
 
 people.first();
-// => { name: 'Chris' }
+// { name: 'Chris' }
 
 [].first();
-// => undefined
+// undefined
 ```
 
 ## last
@@ -64,10 +70,10 @@ const people = [
 ];
 
 people.last();
-// => { name: 'Vu' }
+// { name: 'Vu' }
 
 [].last();
-// => undefined
+// undefined
 ```
 
 ## mapBy
@@ -80,5 +86,5 @@ const people = [
 ];
 
 people.mapBy('name');
-// => ['Chris', 'Giuliano', 'Vu']
+// ['Chris', 'Giuliano', 'Vu']
 ```
