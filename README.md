@@ -28,6 +28,7 @@ people.findBy('isAdmin', true);
     - [findBy(key, value)](#findbykey-value)
     - [first()](#first)
     - [isAny(key, value)](#isanykey-value)
+    - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
     - [mapBy(key, value)](#mapbykey-value)
 
@@ -105,7 +106,7 @@ people.first();
 const people = [
     { name: 'Chris', isAdmin: true },
     { name: 'Giuliano', isAdmin: true },
-    { name: 'Vu', isAdmin: true },
+    { name: 'Vu', isAdmin: true }
 ];
 
 people.isAny('name', 'Giuliano');
@@ -113,6 +114,22 @@ people.isAny('name', 'Giuliano');
 
 people.isAny('isAdmin', false);
 // false
+```
+
+### isEvery(key, value)
+
+```js
+const people = [
+    { name: 'Chris', isAdmin: true },
+    { name: 'Giuliano', isAdmin: true },
+    { name: 'Vu', isAdmin: true }
+];
+
+people.isEvery('name', 'Vu');
+// false
+
+people.isEvery('isAdmin', true);
+// true
 ```
 
 ### last()
