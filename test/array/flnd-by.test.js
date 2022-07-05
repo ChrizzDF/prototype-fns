@@ -17,8 +17,8 @@ describe('filterBy', () => {
 
     describe('success', () => {
         it('returns correct item', () => {
-            expect(people.findBy('name', 'Vu')).to.deep.equal({
-                name: 'Vu', isAdmin: undefined
+            expect(people.findBy('isAdmin', false)).to.deep.equal({
+                name: 'Giuliano', isAdmin: false
             });
         });
         
