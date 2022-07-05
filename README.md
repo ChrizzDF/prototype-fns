@@ -1,12 +1,29 @@
 # Table of Contents
 - [Table of Contents](#table-of-contents)
-  - [filterBy](#filterby)
-  - [findBy](#findby)
-  - [first](#first)
-  - [last](#last)
-  - [mapBy](#mapby)
+  - [Object](#object)
+    - [isEmpty()](#isempty)
+  - [Array](#array)
+    - [filterBy(key, value)](#filterbykey-value)
+    - [findBy(key, value)](#findbykey-value)
+    - [first()](#first)
+    - [last()](#last)
+    - [mapBy(key, value)](#mapbykey-value)
 
-## filterBy
+## Object
+
+### isEmpty()
+
+```js
+{ name: 'Chris' }.isEmpty();
+// false
+
+{}.isEmpty();
+// true
+```
+
+## Array
+
+### filterBy(key, value)
 
 ```js
 const people = [
@@ -28,7 +45,7 @@ people.filterBy('name', 'Tom');
 // undefined
 ```
 
-## findBy
+### findBy(key, value)
 
 ```js
 const people = [
@@ -44,7 +61,7 @@ people.findBy('name', 'Tom');
 // undefined
 ```
 
-## first
+### first()
 
 ```js
 const people = [
@@ -60,7 +77,7 @@ people.first();
 // undefined
 ```
 
-## last
+### last()
 
 ```js
 const people = [
@@ -76,7 +93,7 @@ people.last();
 // undefined
 ```
 
-## mapBy
+### mapBy(key, value)
 
 ```js
 const people = [
