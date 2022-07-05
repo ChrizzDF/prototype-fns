@@ -2,7 +2,7 @@
 
 This library is adding custom prototype methods that are easier to use and to understand. You don't need to import helpers everywhere you want to use them - The methods are directly available on the Object/Array.
 
-## Example
+## Examples
 ```js
 const people = [
     { name: 'Chris', isAdmin: false },
@@ -10,16 +10,26 @@ const people = [
     { name: 'Vu', isAdmin: true }
 ];
 
-// Getting all the admins (built-in filter)
-people.filter(person => person.isAdmin);
+// Find
+people.find(person => person.name === 'Chris'); // Before
+people.findBy('name', 'Chris'); // After
 
-// Getting all the admins (findBy)
-people.findBy('isAdmin', true);
+// Map
+people.map(person => person.name); // Before
+people.mapBy('name'); // After
+
+// Sort
+people.sort((a, b) => a.prop - b.prop); // Before
+people.orderBy('name'); // After
+
+// Last
+people[people.length - 1]; // Before
+people.last(); // After
 ```
 
 # Table of Contents
 - [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
-  - [Example](#example)
+  - [Examples](#examples)
 - [Table of Contents](#table-of-contents)
   - [Object](#object)
     - [isEmpty()](#isempty)
