@@ -2,6 +2,35 @@
 
 This library is adding custom prototype methods that are easier to use and to understand. You don't need to import helpers everywhere you want to use them - The methods are directly available on the Object/Array.
 
+# Table of Contents
+- [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
+- [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Examples](#examples)
+  - [Array](#array)
+    - [filterBy(key, value)](#filterbykey-value)
+    - [findBy(key, value)](#findbykey-value)
+    - [first()](#first)
+    - [isAny(key, value)](#isanykey-value)
+    - [isEvery(key, value)](#iseverykey-value)
+    - [last()](#last)
+    - [mapBy(key, value)](#mapbykey-value)
+    - [order(direction?)](#orderdirection)
+    - [orderBy(key, direction?)](#orderbykey-direction)
+  - [Object](#object)
+    - [isEmpty()](#isempty)
+
+## Installation
+
+`npm install prototype-fns`
+
+## Usage
+
+```js
+import 'prototype-fns';
+```
+
 ## Examples
 ```js
 const people = [
@@ -25,35 +54,6 @@ people.orderBy('name'); // After
 // Last
 people[people.length - 1]; // Before
 people.last(); // After
-```
-
-# Table of Contents
-- [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
-  - [Examples](#examples)
-- [Table of Contents](#table-of-contents)
-  - [Object](#object)
-    - [isEmpty()](#isempty)
-  - [Array](#array)
-    - [filterBy(key, value)](#filterbykey-value)
-    - [findBy(key, value)](#findbykey-value)
-    - [first()](#first)
-    - [isAny(key, value)](#isanykey-value)
-    - [isEvery(key, value)](#iseverykey-value)
-    - [last()](#last)
-    - [mapBy(key, value)](#mapbykey-value)
-    - [order(direction?)](#orderdirection)
-    - [orderBy(key, direction?)](#orderbykey-direction)
-
-## Object
-
-### isEmpty()
-
-```js
-{ name: 'Chris' }.isEmpty();
-// false
-
-{}.isEmpty();
-// true
 ```
 
 ## Array
@@ -222,4 +222,16 @@ people.orderBy('name', 'desc');
 //   { name: 'Giuliano' },
 //   { name: 'Chris' }
 // ]
+```
+
+## Object
+
+### isEmpty()
+
+```js
+{ name: 'Chris' }.isEmpty();
+// false
+
+{}.isEmpty();
+// true
 ```
