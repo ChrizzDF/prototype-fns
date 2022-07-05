@@ -27,6 +27,7 @@ people.findBy('isAdmin', true);
     - [filterBy(key, value)](#filterbykey-value)
     - [findBy(key, value)](#findbykey-value)
     - [first()](#first)
+    - [isAny(key, value)](#isanykey-value)
     - [last()](#last)
     - [mapBy(key, value)](#mapbykey-value)
 
@@ -96,6 +97,22 @@ people.first();
 
 [].first();
 // undefined
+```
+
+### isAny(key, value)
+
+```js
+const people = [
+    { name: 'Chris', isAdmin: true },
+    { name: 'Giuliano', isAdmin: true },
+    { name: 'Vu', isAdmin: true },
+];
+
+people.isAny('name', 'Giuliano');
+// true
+
+people.isAny('isAdmin', false);
+// false
 ```
 
 ### last()
