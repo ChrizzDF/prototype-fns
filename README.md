@@ -1,4 +1,25 @@
+# A set of custom prototypes that you don't want to miss anymore.
+
+This library is adding custom prototype methods that are easier to use and to understand. You don't need to import helpers everywhere you want to use them - The methods are directly available on the Object/Array.
+
+## Example
+```js
+const people = [
+    { name: 'Chris', isAdmin: false },
+    { name: 'Giuliano', isAdmin: true },
+    { name: 'Vu', isAdmin: true }
+];
+
+// Getting all the admins (built-in filter)
+people.filter(person => person.isAdmin);
+
+// Getting all the admins (findBy)
+people.findBy('isAdmin', true);
+```
+
 # Table of Contents
+- [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
+  - [Example](#example)
 - [Table of Contents](#table-of-contents)
   - [Object](#object)
     - [isEmpty()](#isempty)
