@@ -2,6 +2,7 @@
 - [Table of Contents](#table-of-contents)
   - [filterBy](#filterby)
   - [findBy](#findby)
+  - [first](#first)
   - [last](#last)
   - [mapBy](#mapby)
 
@@ -34,6 +35,22 @@ people.findBy('name', 'Giuliano');
 // => { name: 'Giuliano' }
 
 people.findBy('name', 'Tom');
+// => undefined
+```
+
+## first
+
+```js
+const people = [
+    { name: 'Chris' },
+    { name: 'Giuliano' },
+    { name: 'Vu' }
+];
+
+people.first();
+// => { name: 'Chris' }
+
+[].first();
 // => undefined
 ```
 
