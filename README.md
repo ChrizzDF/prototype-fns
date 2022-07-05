@@ -31,6 +31,7 @@ people.findBy('isAdmin', true);
     - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
     - [mapBy(key, value)](#mapbykey-value)
+    - [orderBy(key, direction?)](#orderbykey-direction)
 
 ## Object
 
@@ -159,4 +160,41 @@ const people = [
 
 people.mapBy('name');
 // ['Chris', 'Giuliano', 'Vu']
+```
+
+### orderBy(key, direction?)
+
+```js
+const people = [
+    { name: 'Chris' },
+    { name: 'Vu' },
+    { name: 'Giuliano' }
+];
+
+people.orderBy('name', 'asc');
+// [
+//   { name: 'Chris' },
+//   { name: 'Giuliano' },
+//   { name: 'Vu' }
+// ]
+```
+
+ℹ️ If you omit the direction, the result will be ordered ascending by default.
+
+```js
+people.orderBy('name');
+// [
+//   { name: 'Chris' },
+//   { name: 'Giuliano' },
+//   { name: 'Vu' }
+// ]
+```
+
+```js
+people.orderBy('name', 'desc');
+// [
+//   { name: 'Vu' },
+//   { name: 'Giuliano' },
+//   { name: 'Chris' }
+// ]
 ```
