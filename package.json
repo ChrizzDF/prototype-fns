@@ -7,7 +7,7 @@
     "test": "mocha './test/**/*.js'",
     "test:watch": "mocha './test/**/*.js' --watch"
   },
-  "keywords": ["helpers", "prototype functions", "utilities"],
+  "keywords": ["enhanced JavaScript", "helpers", "prototype functions", "utilities"],
   "author": {
     "name" : "ChrizzDF",
     "email" : "chrizzdf@gmail.com"

@@ -2,6 +2,8 @@
 
 This library is adding custom prototype methods that are easier to use and to understand. You don't need to import helpers everywhere you want to use them - The methods are directly available on the Object/Array.
 
+[![Node.js CI](https://github.com/ChrizzDF/prototype-fns/actions/workflows/node.js.yml/badge.svg)](https://github.com/ChrizzDF/prototype-fns/actions/workflows/node.js.yml)
+
 # Table of Contents
 - [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
 - [Table of Contents](#table-of-contents)
