@@ -29,6 +29,7 @@ This library is adding custom prototype methods that are easier to use and to un
 
 ## Usage
 
+Make the custom prototypes available by importing them:
 ```js
 import 'prototype-fns';
 ```

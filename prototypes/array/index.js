@@ -1,2 +1,9 @@
 export { default as filterBy } from './filter-by';
+export { default as findBy } from './find-by';
+export { default as first } from './first';
+export { default as isAny } from './is-any';
+export { default as isEvery } from './is-every';
+export { default as last } from './last';
 export { default as mapBy } from './map-by';
+export { default as orderBy } from './order-by';
+export { default as order } from './order';
