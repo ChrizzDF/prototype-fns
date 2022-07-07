@@ -25,7 +25,9 @@ This library is adding custom prototype methods that are easier to use and to un
 
 ## Installation
 
-`npm install prototype-fns`
+```console
+npm install prototype-fns
+```
 
 ## Usage
 
