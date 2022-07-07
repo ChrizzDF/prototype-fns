@@ -73,7 +73,9 @@ const people = [
 ];
 
 people.filterBy('name', 'Chris');
-// ['Chris']
+// [
+//   { name: 'Chris', isAdmin: true }
+// ]
 
 people.filterBy('isAdmin', false);
 // [
@@ -82,7 +84,7 @@ people.filterBy('isAdmin', false);
 // ]
 
 people.filterBy('name', 'Tom');
-// undefined
+// []
 ```
 
 ### findBy(key, value)
