@@ -7,9 +7,9 @@ This library is adding custom prototype methods that are easier to use and to un
 # Table of Contents
 - [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
 - [Table of Contents](#table-of-contents)
+  - [Examples](#examples)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Examples](#examples)
   - [Array](#array)
     - [filterBy(key, value)](#filterbykey-value)
     - [findBy(key, value)](#findbykey-value)
@@ -22,19 +22,6 @@ This library is adding custom prototype methods that are easier to use and to un
     - [orderBy(key, direction?)](#orderbykey-direction)
   - [Object](#object)
     - [isEmpty()](#isempty)
-
-## Installation
-
-```console
-npm install prototype-fns
-```
-
-## Usage
-
-Make the custom prototypes available by importing them:
-```js
-import 'prototype-fns';
-```
 
 ## Examples
 ```js
@@ -59,6 +46,29 @@ people.orderBy('name'); // After
 // Last
 people[people.length - 1]; // Before
 people.last(); // After
+```
+
+## Installation
+
+```console
+npm install prototype-fns
+```
+
+## Usage
+
+Make the custom prototypes available by importing them:
+```js
+import 'prototype-fns';
+```
+
+You can also import a specific subset of functions, for example if you only need array related ones:
+```js
+import 'prototype-fns/prototypes/array';
+```
+
+Or even single ones with:
+```js
+import 'prototype-fns/prototypes/array/filter-by';
 ```
 
 ## Array
