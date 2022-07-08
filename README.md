@@ -21,6 +21,7 @@ This library is adding custom prototype methods that are easier to use and to un
     - [last()](#last)
     - [mapBy(key)](#mapbykey)
     - [mapProps(prop, ...)](#mappropsprop-)
+    - [mapPropsWithout(prop, ...)](#mappropswithoutprop-)
     - [oneAfter(item)](#oneafteritem)
     - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
@@ -230,6 +231,23 @@ const people = [
 ];
 
 people.mapProps('id', 'name');
+// [
+//   { id: 1, name: 'Chris' },
+//   { id: 2, name: 'Giuliano' },
+//   { id: 3, name: 'Vu' }
+// ]
+```
+
+### mapPropsWithout(prop, ...)
+
+```js
+const people = [
+    { id: 1, name: 'Chris', token: 'abc' },
+    { id: 2, name: 'Giuliano', token: 'def' },
+    { id: 3, name: 'Vu', token: 'ghi' },
+];
+
+people.mapPropsWithout('token');
 // [
 //   { id: 1, name: 'Chris' },
 //   { id: 2, name: 'Giuliano' },
