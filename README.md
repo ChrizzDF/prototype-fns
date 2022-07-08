@@ -19,7 +19,7 @@ This library is adding custom prototype methods that are easier to use and to un
     - [isAny(key, value)](#isanykey-value)
     - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
-    - [mapBy(key, value)](#mapbykey-value)
+    - [mapBy(key)](#mapbykey)
     - [oneAfter(item)](#oneafteritem)
     - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
@@ -31,9 +31,9 @@ This library is adding custom prototype methods that are easier to use and to un
 ## Examples
 ```js
 const people = [
-    { name: 'Chris', isAdmin: false },
-    { name: 'Giuliano', isAdmin: true },
-    { name: 'Vu', isAdmin: true }
+    { name: 'Chris' },
+    { name: 'Giuliano' },
+    { name: 'Vu' }
 ];
 
 // Find
@@ -206,13 +206,13 @@ people.last();
 // undefined
 ```
 
-### mapBy(key, value)
+### mapBy(key)
 
 ```js
 const people = [
-    { id: 1, name: 'Chris' },
-    { id: 2, name: 'Giuliano' },
-    { id: 3, name: 'Vu' }
+    { name: 'Chris' },
+    { name: 'Giuliano' },
+    { name: 'Vu' }
 ];
 
 people.mapBy('name');
