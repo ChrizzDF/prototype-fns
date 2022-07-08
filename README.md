@@ -20,6 +20,7 @@ This library is adding custom prototype methods that are easier to use and to un
     - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
     - [mapBy(key)](#mapbykey)
+    - [mapProps(prop, ...)](#mappropsprop-)
     - [oneAfter(item)](#oneafteritem)
     - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
@@ -217,6 +218,23 @@ const people = [
 
 people.mapBy('name');
 // ['Chris', 'Giuliano', 'Vu']
+```
+
+### mapProps(prop, ...)
+
+```js
+const people = [
+    { id: 1, name: 'Chris', token: 'abc' },
+    { id: 2, name: 'Giuliano', token: 'def' },
+    { id: 3, name: 'Vu', token: 'ghi' },
+];
+
+people.mapProps('id', 'name');
+// [
+//   { id: 1, name: 'Chris' },
+//   { id: 2, name: 'Giuliano' },
+//   { id: 3, name: 'Vu' }
+// ]
 ```
 
 ### oneAfter(item)
