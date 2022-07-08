@@ -21,6 +21,7 @@ This library is adding custom prototype methods that are easier to use and to un
     - [last()](#last)
     - [mapBy(key, value)](#mapbykey-value)
     - [oneAfter(item)](#oneafteritem)
+    - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
   - [Object](#object)
@@ -226,6 +227,18 @@ people.oneAfter('Chris');
 // 'Giuliano'
 
 people.oneAfter('Vu');
+// undefined
+```
+
+### oneBefore(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.oneBefore('Vu');
+// 'Giuliano'
+
+people.oneBefore('Chris');
 // undefined
 ```
 
