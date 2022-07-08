@@ -12,6 +12,7 @@ This library is adding custom prototype methods that are easier to use and to un
   - [Usage](#usage)
   - [Array](#array)
     - [allAfter(item)](#allafteritem)
+    - [allBefore(item)](#allbeforeitem)
     - [filterBy(key, value)](#filterbykey-value)
     - [findBy(key, value)](#findbykey-value)
     - [first()](#first)
@@ -84,6 +85,18 @@ people.allAfter('Chris');
 // ['Giuliano', 'Vu']
 
 people.allAfter('Vu');
+// []
+```
+
+### allBefore(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.allBefore('Vu');
+// ['Chris', 'Giuliano']
+
+people.allBefore('Chris');
 // []
 ```
 
