@@ -1,34 +1,41 @@
-# A set of custom prototypes that you don't want to miss anymore.
+# A set of custom JavaScript prototypes that you will learn to love.
 
-This library is adding custom prototype methods that are easier to use and to understand. You don't need to import helpers everywhere you want to use them - The methods are directly available on the Object/Array.
+This library is adding custom prototype methods to your JavaScript that are easier to use and to understand. You don't need to import helpers everywhere you want to use them - The methods are directly available on the Object/Array.
 
 [![Node.js CI](https://github.com/ChrizzDF/prototype-fns/actions/workflows/node.js.yml/badge.svg)](https://github.com/ChrizzDF/prototype-fns/actions/workflows/node.js.yml)
 
 # Table of Contents
-- [A set of custom prototypes that you don't want to miss anymore.](#a-set-of-custom-prototypes-that-you-dont-want-to-miss-anymore)
+- [A set of custom JavaScript prototypes that you will learn to love.](#a-set-of-custom-javascript-prototypes-that-you-will-learn-to-love)
 - [Table of Contents](#table-of-contents)
   - [Examples](#examples)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Array](#array)
+    - [allAfter(item)](#allafteritem)
+    - [allBefore(item)](#allbeforeitem)
     - [filterBy(key, value)](#filterbykey-value)
     - [findBy(key, value)](#findbykey-value)
     - [first()](#first)
     - [isAny(key, value)](#isanykey-value)
     - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
-    - [mapBy(key, value)](#mapbykey-value)
+    - [mapBy(key)](#mapbykey)
+    - [mapProps(prop, ...)](#mappropsprop-)
+    - [mapPropsWithout(prop, ...)](#mappropswithoutprop-)
+    - [oneAfter(item)](#oneafteritem)
+    - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
+    - [without(item)](#withoutitem)
   - [Object](#object)
     - [isEmpty()](#isempty)
 
 ## Examples
 ```js
 const people = [
-    { name: 'Chris', isAdmin: false },
-    { name: 'Giuliano', isAdmin: true },
-    { name: 'Vu', isAdmin: true }
+    { name: 'Chris' },
+    { name: 'Giuliano' },
+    { name: 'Vu' }
 ];
 
 // Find
@@ -72,6 +79,30 @@ import 'prototype-fns/prototypes/array/filter-by';
 ```
 
 ## Array
+
+### allAfter(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.allAfter('Chris');
+// ['Giuliano', 'Vu']
+
+people.allAfter('Vu');
+// []
+```
+
+### allBefore(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.allBefore('Vu');
+// ['Chris', 'Giuliano']
+
+people.allBefore('Chris');
+// []
+```
 
 ### filterBy(key, value)
 
@@ -177,17 +208,75 @@ people.last();
 // undefined
 ```
 
-### mapBy(key, value)
+### mapBy(key)
 
 ```js
 const people = [
-    { id: 1, name: 'Chris' },
-    { id: 2, name: 'Giuliano' },
-    { id: 3, name: 'Vu' }
+    { name: 'Chris' },
+    { name: 'Giuliano' },
+    { name: 'Vu' }
 ];
 
 people.mapBy('name');
 // ['Chris', 'Giuliano', 'Vu']
+```
+
+### mapProps(prop, ...)
+
+```js
+const people = [
+    { id: 1, name: 'Chris', token: 'abc' },
+    { id: 2, name: 'Giuliano', token: 'def' },
+    { id: 3, name: 'Vu', token: 'ghi' },
+];
+
+people.mapProps('id', 'name');
+// [
+//   { id: 1, name: 'Chris' },
+//   { id: 2, name: 'Giuliano' },
+//   { id: 3, name: 'Vu' }
+// ]
+```
+
+### mapPropsWithout(prop, ...)
+
+```js
+const people = [
+    { id: 1, name: 'Chris', token: 'abc' },
+    { id: 2, name: 'Giuliano', token: 'def' },
+    { id: 3, name: 'Vu', token: 'ghi' },
+];
+
+people.mapPropsWithout('token');
+// [
+//   { id: 1, name: 'Chris' },
+//   { id: 2, name: 'Giuliano' },
+//   { id: 3, name: 'Vu' }
+// ]
+```
+
+### oneAfter(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.oneAfter('Chris');
+// 'Giuliano'
+
+people.oneAfter('Vu');
+// undefined
+```
+
+### oneBefore(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.oneBefore('Vu');
+// 'Giuliano'
+
+people.oneBefore('Chris');
+// undefined
 ```
 
 ### order(direction?)
@@ -230,15 +319,22 @@ people.orderBy('name');
 //   { name: 'Giuliano' },
 //   { name: 'Vu' }
 // ]
-```
 
-```js
 people.orderBy('name', 'desc');
 // [
 //   { name: 'Vu' },
 //   { name: 'Giuliano' },
 //   { name: 'Chris' }
 // ]
+```
+
+### without(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.without('Giuliano');
+// ['Chris', 'Vu']
 ```
 
 ## Object

@@ -1,13 +1,13 @@
 {
   "name": "prototype-fns",
-  "version": "1.0.3",
-  "description": "Custom prototype functions to perform common operations with more ease and readability.",
+  "version": "1.1.0",
+  "description": "Custom JavaScript prototype functions to perform common operations with more ease and readability.",
   "main": "index.js",
   "scripts": {
     "test": "mocha './test/**/*.js'",
     "test:watch": "mocha './test/**/*.js' --watch"
   },
-  "keywords": ["enhanced JavaScript", "helpers", "prototype functions", "utilities"],
+  "keywords": ["enhanced JavaScript", "helpers", "JavaScript", "prototype functions", "utilities"],
   "author": {
     "name" : "ChrizzDF",
     "email" : "chrizzdf@gmail.com"
