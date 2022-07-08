@@ -1,3 +1,5 @@
+export { default as allAfter } from './all-after';
+export { default as allBefore } from './all-before';
 export { default as filterBy } from './filter-by';
 export { default as findBy } from './find-by';
 export { default as first } from './first';
@@ -5,5 +7,10 @@ export { default as isAny } from './is-any';
 export { default as isEvery } from './is-every';
 export { default as last } from './last';
 export { default as mapBy } from './map-by';
+export { default as mapProps } from './map-props';
+export { default as mapPropsWithout } from './map-props-without';
+export { default as oneAfter } from './one-after';
+export { default as oneBefore } from './one-before';
 export { default as orderBy } from './order-by';
 export { default as order } from './order';
+export { default as without } from './without';
