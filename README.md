@@ -24,6 +24,7 @@ This library is adding custom prototype methods that are easier to use and to un
     - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
+    - [without(item)](#withoutitem)
   - [Object](#object)
     - [isEmpty()](#isempty)
 
@@ -289,6 +290,15 @@ people.orderBy('name', 'desc');
 //   { name: 'Giuliano' },
 //   { name: 'Chris' }
 // ]
+```
+
+### without(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.without('Giuliano');
+// ['Chris', 'Vu']
 ```
 
 ## Object
