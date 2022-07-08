@@ -11,6 +11,7 @@ This library is adding custom prototype methods that are easier to use and to un
   - [Installation](#installation)
   - [Usage](#usage)
   - [Array](#array)
+    - [allAfter(item)](#allafteritem)
     - [filterBy(key, value)](#filterbykey-value)
     - [findBy(key, value)](#findbykey-value)
     - [first()](#first)
@@ -73,6 +74,18 @@ import 'prototype-fns/prototypes/array/filter-by';
 ```
 
 ## Array
+
+### allAfter(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.allAfter('Chris');
+// ['Giuliano', 'Vu']
+
+people.allAfter('Vu');
+// []
+```
 
 ### filterBy(key, value)
 
