@@ -18,6 +18,7 @@ This library is adding custom prototype methods that are easier to use and to un
     - [isEvery(key, value)](#iseverykey-value)
     - [last()](#last)
     - [mapBy(key, value)](#mapbykey-value)
+    - [oneAfter(item)](#oneafteritem)
     - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
   - [Object](#object)
@@ -188,6 +189,18 @@ const people = [
 
 people.mapBy('name');
 // ['Chris', 'Giuliano', 'Vu']
+```
+
+### oneAfter(item)
+
+```js
+const people = ['Chris', 'Giuliano', 'Vu'];
+
+people.oneAfter('Chris');
+// 'Giuliano'
+
+people.oneAfter('Vu');
+// undefined
 ```
 
 ### order(direction?)
