@@ -282,9 +282,7 @@ people.orderBy('name');
 //   { name: 'Giuliano' },
 //   { name: 'Vu' }
 // ]
-```
 
-```js
 people.orderBy('name', 'desc');
 // [
 //   { name: 'Vu' },
