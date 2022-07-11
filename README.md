@@ -26,6 +26,7 @@ This library is adding custom prototype methods to your JavaScript that are easi
     - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
+    - [sumBy(key)](#sumbykey)
     - [without(item)](#withoutitem)
   - [Object](#object)
     - [isEmpty()](#isempty)
@@ -326,6 +327,19 @@ people.orderBy('name', 'desc');
 //   { name: 'Giuliano' },
 //   { name: 'Chris' }
 // ]
+```
+
+### sumBy(key)
+
+```js
+const people = [
+    { name: 'Chris', score: 1 },
+    { name: 'Giuliano', score: 2 },
+    { name: 'Vu', score: 3 },
+];
+
+people.sumBy('score');
+// 6
 ```
 
 ### without(item)

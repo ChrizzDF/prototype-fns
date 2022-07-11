@@ -13,4 +13,5 @@ export { default as oneAfter } from './one-after';
 export { default as oneBefore } from './one-before';
 export { default as orderBy } from './order-by';
 export { default as order } from './order';
+export { default as sumBy } from './sum-by';
 export { default as without } from './without';
