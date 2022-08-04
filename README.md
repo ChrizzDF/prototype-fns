@@ -26,6 +26,7 @@ This library is adding custom prototype methods to your JavaScript that are easi
     - [oneBefore(item)](#onebeforeitem)
     - [order(direction?)](#orderdirection)
     - [orderBy(key, direction?)](#orderbykey-direction)
+    - [shuffle()](#shuffle)
     - [sumBy(key)](#sumbykey)
     - [without(item)](#withoutitem)
   - [Object](#object)
@@ -327,6 +328,15 @@ people.orderBy('name', 'desc');
 //   { name: 'Giuliano' },
 //   { name: 'Chris' }
 // ]
+```
+
+### shuffle()
+
+```js
+const people = ['Chris', 'Vu', 'Giuliano'];
+
+people.shuffle();
+// Possible order: ['Giuliano', 'Chris', 'Vu']
 ```
 
 ### sumBy(key)
