@@ -1,6 +1,6 @@
 {
   "name": "prototype-fns",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Custom JavaScript prototype functions to perform common operations with more ease and readability.",
   "main": "index.js",
   "scripts": {
